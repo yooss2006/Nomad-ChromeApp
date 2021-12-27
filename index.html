@@ -10,7 +10,8 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header-tit">Pomodoro Timer</h1>
+      <h1 class="blind">Pomodoro Timer</h1>
+      <p class="toggle-watch hide"></p>
     </header>
     <main class="main">
       <section class="watch">
@@ -18,8 +19,23 @@
         <p class="cont-time"></p>
         <p class="cont-hour"></p>
       </section>
+      <section class="login hide">
+        <h2 class="blind">로그인</h2>
+        <form method="get">
+          <input
+            type="password"
+            class="pwd"
+            placeholder="로그인 비밀번호를 입력하세요 비밀번호:1234"
+          />
+          <button class="btn-pwd">로그인</button>
+        </form>
+      </section>
     </main>
+    <div class="cont-bg"></div>
+
     <script src="./module/timer.js"></script>
     <script src="./module/watch.js"></script>
+    <script src="./module/login.js"></script>
+    <script src="./module/bgColorChange.js"></script>
   </body>
 </html>
