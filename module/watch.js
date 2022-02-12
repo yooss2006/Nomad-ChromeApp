@@ -1,7 +1,8 @@
-const watch = document.querySelector(".watch .cont-time");
-const toggleWatch = document.querySelector(".toggle-watch");
-const contHour = document.querySelector(".watch .cont-hour");
 function getTime() {
+  const contTime = document.querySelector(".watch .cont-time");
+  const contHour = document.querySelector(".watch .cont-hour");
+  const widgtWatch = document.querySelector(".widgtWatch");
+
   const time = new Date();
   let hour = time.getHours();
   let minute = (time.getMinutes() + "").padStart(2, "0");
@@ -23,7 +24,7 @@ function getTime() {
     hour = (hour + "").padStart(2, "0");
   }
   contHour.innerHTML = hour;
-  watch.innerHTML = `${ampm} ${minute}분  ${seconds} 초`;
-  toggleWatch.innerHTML = `${ampm} ${hour}시 ${minute}분  ${seconds} 초`;
+  contTime.innerHTML = `${ampm} ${minute}분  ${seconds} 초`;
+  widgtWatch.innerHTML = `${ampm} ${hour}시 ${minute}분  ${seconds} 초`;
 }
 setInterval(getTime, 1000);

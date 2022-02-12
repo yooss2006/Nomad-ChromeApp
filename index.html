@@ -10,32 +10,33 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="blind">Pomodoro Timer</h1>
-      <p class="toggle-watch hide"></p>
+      <h1 class="blind">마음대로 크롬앱</h1>
     </header>
-    <main class="main">
-      <section class="watch">
-        <h2 class="blind">현재 시각</h2>
-        <p class="cont-time"></p>
-        <p class="cont-hour"></p>
+    <main>
+      <section class="main">
+        <article class="watch">
+          <h2 class="blind">현재 시각</h2>
+          <p class="cont-time"></p>
+          <p class="cont-hour"></p>
+        </article>
       </section>
-      <section class="login hide">
-        <h2 class="blind">로그인</h2>
-        <form method="get">
-          <input
-            type="password"
-            class="pwd"
-            placeholder="로그인 비밀번호를 입력하세요 비밀번호:1234"
-          />
-          <button class="btn-pwd">로그인</button>
-        </form>
+
+      <section class="hide widgt">
+        <h2 class="blind">위젯 화면</h2>
+        <p class="widgtWatch"></p>
+        <div class="setting">
+          <button class="bgChange" type="button">
+            <img src="./img/bgChange.png" alt="배경이미지 변경" />
+          </button>
+          <button class="close" type="button">
+            <img src="./img/close.png" alt="나가기" />
+          </button>
+        </div>
       </section>
     </main>
     <div class="cont-bg"></div>
 
-    <script src="./module/timer.js"></script>
     <script src="./module/watch.js"></script>
-    <script src="./module/login.js"></script>
-    <script src="./module/bgColorChange.js"></script>
+    <script src="./module/wigetToggle.js"></script>
   </body>
 </html>
